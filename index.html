@@ -4,7 +4,7 @@
 <title>Rank BB TI</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{color-scheme:dark;--bg:#0c0c0e;--card:#1c1c1e;--card2:#2c2c2e;--line:rgba(255,255,255,.1);--acc:#0a84ff;--acc2:#5ac8fa;--tx:#f5f5f7;--mut:#8e8e93;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{color-scheme:dark;--bg:#000000;--card:#1c1c1e;--card2:#2c2c2e;--line:rgba(255,255,255,.1);--acc:#ff6a00;--acc2:#ff9142;--tx:#f5f5f7;--mut:#8e8e93;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *{box-sizing:border-box}html,body{margin:0}html{-webkit-text-size-adjust:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
 body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",Inter,"Helvetica Neue",Arial,sans-serif;font-size:15px;line-height:1.5;letter-spacing:-.011em;-webkit-font-smoothing:antialiased;padding:20px 16px 56px}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
@@ -13,7 +13,7 @@ button,select,input,textarea{font-family:inherit}
 .top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
 .logo{font-weight:700;font-size:24px;letter-spacing:-.035em}.logo b{color:var(--acc);font-weight:700}.logo small{display:block;font-size:13px;color:var(--mut);font-weight:400;letter-spacing:-.01em;margin-top:2px}
 .tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.sync{font-size:12px;color:var(--mut)}
-.rs{background:rgba(10,132,255,.15);border:0;color:var(--acc2);border-radius:980px;padding:8px 16px;font-weight:600;font-size:13px;cursor:pointer;width:auto;transition:background .2s}.rs:hover{background:rgba(10,132,255,.28)}
+.rs{background:rgba(255,106,0,.15);border:0;color:var(--acc2);border-radius:980px;padding:8px 16px;font-weight:600;font-size:13px;cursor:pointer;width:auto;transition:background .2s}.rs:hover{background:rgba(255,106,0,.28)}
 nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;gap:2px;overflow-x:auto;padding:4px;margin-bottom:16px;background:rgba(44,44,46,.72);-webkit-backdrop-filter:blur(20px) saturate(1.6);backdrop-filter:blur(20px) saturate(1.6);border-radius:14px;scrollbar-width:none}
 nav::-webkit-scrollbar{display:none}
 nav button{flex:none;background:none;border:0;color:var(--mut);border-radius:10px;padding:8px 14px;font-size:14px;font-weight:500;cursor:pointer;transition:background .2s,color .2s}
@@ -37,14 +37,14 @@ select,input,textarea{width:100%;background:var(--card2);border:0;color:var(--tx
 select:focus,input:focus,textarea:focus{outline:2px solid var(--acc)}
 label{font-size:13px;color:var(--mut);display:block;margin-bottom:4px}
 .go{width:100%;background:var(--acc);color:#fff;font-weight:600;border:0;border-radius:980px;padding:14px;font-size:16px;margin-top:12px;cursor:pointer;transition:opacity .2s,transform .15s}.go:hover{opacity:.9}.go:active{transform:scale(.98)}
-.go2{background:rgba(10,132,255,.15);color:var(--acc2)}
+.go2{background:rgba(255,106,0,.15);color:var(--acc2)}
 .tabs{display:flex;gap:6px;margin-bottom:8px}.tab{width:auto;background:var(--card2);border:0;color:var(--mut);padding:6px 14px;border-radius:980px;cursor:pointer;font-size:13px;font-weight:500}.tab.on{background:var(--acc);color:#fff;font-weight:600}
 svg.ch{width:100%;display:block}svg text{font-family:inherit}
 .al{display:grid;grid-template-columns:1fr 1fr;gap:4px 24px}
 .ar{font-size:14px;padding:2px 6px 4px;margin:0 -6px;border-radius:10px;cursor:pointer;transition:background .2s}.ar:hover{background:rgba(255,255,255,.05)}.ar div{display:flex;justify-content:space-between;gap:6px}.ar .bar{height:5px;margin:4px 0}.ar small{color:var(--mut);font-size:11px}
 .gh{grid-column:1/-1;font-size:13px;color:var(--mut);font-weight:600;margin-top:12px;display:flex;justify-content:space-between}
 .heat{display:grid;grid-template-columns:repeat(auto-fill,minmax(16px,1fr));gap:4px}.heat i{aspect-ratio:1;border-radius:5px;background:rgba(255,255,255,.08);cursor:pointer}
-.heat .l1{background:rgba(10,132,255,.3)}.heat .l2{background:rgba(10,132,255,.6)}.heat .l3{background:var(--acc)}.heat .t{outline:2px solid #fff}
+.heat .l1{background:rgba(255,106,0,.3)}.heat .l2{background:rgba(255,106,0,.6)}.heat .l3{background:var(--acc)}.heat .t{outline:2px solid #fff}
 table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:10px 4px;border-bottom:1px solid rgba(255,255,255,.07);text-align:center}th{color:var(--mut);font-weight:500;font-size:12px}td.l{text-align:left}
 .x{width:auto;background:var(--card2);border:0;color:var(--mut);border-radius:8px;padding:3px 10px;cursor:pointer;font-size:14px}.x:hover{color:var(--tx)}
 .chips{display:flex;gap:8px;flex-wrap:wrap}.chip{background:var(--card2);border-radius:12px;padding:8px 12px;font-size:13px}.chip b{color:var(--acc2);font-weight:600}
@@ -61,8 +61,29 @@ svg.ch rect:not(.hit){transform-box:fill-box;transform-origin:bottom;animation:g
 button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 @media(max-width:520px){.rank{font-size:58px}.al{grid-template-columns:1fr}.r3{grid-template-columns:1fr 1fr}.card{padding:16px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.card{border:1px solid rgba(255,255,255,.07);border-radius:22px;transition:border-color .25s}.card:hover{border-color:rgba(255,106,0,.4)}
+.logo b{background:linear-gradient(90deg,#ff6a00,#ffb27a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rank{background:linear-gradient(180deg,#fff 30%,#ff9142);-webkit-background-clip:text;background-clip:text;color:transparent!important}
+.tier{background:rgba(255,106,0,.16)}
+.go{background:linear-gradient(135deg,#ff6a00,#ff9142);color:#000;box-shadow:0 8px 28px rgba(255,106,0,.28)}.go:hover{filter:brightness(1.08);opacity:1}.go2{background:rgba(255,106,0,.14);color:#ff9142;box-shadow:none}
+nav button.on{background:#ff6a00;color:#000}.tab.on{color:#000}
+.perf{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}.perf div{background:var(--card2);border-radius:16px;padding:14px}.perf b{display:block;font-size:22px;font-weight:700;letter-spacing:-.03em;font-variant-numeric:tabular-nums}.perf span{font-size:12px;color:var(--mut)}
+.stats b{font-size:clamp(16px,4.4vw,22px)}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(620px 420px at 8% -4%,rgba(255,106,0,.34),transparent 62%),radial-gradient(520px 420px at 100% 28%,rgba(255,145,66,.2),transparent 62%),radial-gradient(560px 520px at 0% 100%,rgba(255,255,255,.09),transparent 62%)}
+.card{background:linear-gradient(135deg,rgba(255,255,255,.1),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.14);-webkit-backdrop-filter:blur(22px) saturate(1.5);backdrop-filter:blur(22px) saturate(1.5);box-shadow:0 8px 32px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.18)}
+.card:hover{border-color:rgba(255,106,0,.5)}
+.stats div,.perf div,.chip,.x,.tab,select,input,textarea{background:rgba(255,255,255,.07)}
+select,input,textarea{border:1px solid rgba(255,255,255,.1)}
+select option,select optgroup{background:#1c1c1e;color:#f5f5f7}
+.heat i{background:rgba(255,255,255,.1)}
+svg.ch path[pathLength]{stroke-dasharray:1;stroke-dashoffset:1;animation:dr 1.3s cubic-bezier(.3,.7,.2,1) forwards}@keyframes dr{to{stroke-dashoffset:0}}
+.pulse{transform-box:fill-box;transform-origin:center;animation:pl 2.2s ease-in-out infinite}@keyframes pl{50%{transform:scale(1.7);opacity:.04}}
+svg.ch line[stroke="rgba(255,255,255,.08)"]{stroke-dasharray:2 5}
+@media(prefers-reduced-motion:reduce){svg.ch path[pathLength]{stroke-dashoffset:0!important}}
+nav{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.06)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.card{background:rgba(28,28,30,.92)}}
 </style></head><body><div class="wrap">
-<div class="top"><div class="logo">RANK <b>BB</b> · TI<small>Agente de Tecnologia · #1 é o topo</small></div>
+<div class="top"><div class="logo">RANK <b>BB</b> · TI <em style="font-style:normal;font-size:11px;font-weight:700;background:#ff6a00;border-radius:980px;padding:2px 8px;vertical-align:middle;-webkit-text-fill-color:#000">v10</em><small>Agente de Tecnologia · #1 é o topo</small></div>
 <div class="tools"><span class="sync" id="sync"> Salvo neste aparelho</span><button class="rs" onclick="go(6)" title="Aparência">Aparência</button><button class="rs" onclick="resetAll()"> Resetar tudo</button></div></div>
 <nav id="nav"></nav>
 
@@ -79,9 +100,10 @@ button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
  </div></div></div>
 <div class="grid">
 <div class="card full"><h3> Plano de hoje</h3><div class="mut" id="plh" style="margin-bottom:6px"></div><div id="pl"></div></div>
+<div class="card full"><h3>Desempenho</h3><div class="perf" id="perf"></div><div class="mut" id="perfm" style="margin-top:12px"></div></div>
 <div class="card"><h3> Cronômetro</h3><div class="tm" id="tmv">00:00:00</div><div class="row" style="margin-top:8px"><button class="go go2" style="margin-top:0" id="tmb" onclick="tmToggle()">Iniciar</button><button class="go" style="margin-top:0" onclick="tmUse()">Usar na sessão</button></div><div class="mut" style="margin-top:8px">Só conta o tempo em que está rodando (horas líquidas). Se você registrar a sessão sem horas, ele é usado automaticamente.</div></div>
 <div class="card"><h3>Meta de hoje</h3><div class="ring">
- <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="11"/><circle id="rg" cx="60" cy="60" r="52" fill="none" stroke="#0a84ff" stroke-width="11" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7" transform="rotate(-90 60 60)" style="transition:stroke-dashoffset .8s"/><text x="60" y="60" text-anchor="middle" fill="#f5f5f7" font-size="26" font-weight="800" id="rt">0</text><text x="60" y="78" text-anchor="middle" fill="#8e8e93" font-size="12" id="rd">de 60</text></svg>
+ <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="11"/><circle id="rg" cx="60" cy="60" r="52" fill="none" stroke="#ff6a00" stroke-width="11" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7" transform="rotate(-90 60 60)" style="transition:stroke-dashoffset .8s"/><text x="60" y="60" text-anchor="middle" fill="#f5f5f7" font-size="26" font-weight="800" id="rt">0</text><text x="60" y="78" text-anchor="middle" fill="#8e8e93" font-size="12" id="rd">de 60</text></svg>
  <div class="stats" style="flex:1;grid-template-columns:1fr 1fr"><div><b id="tc">0</b><span>acertos</span></div><div><b id="ta">0,0%</b><span>taxa</span></div><div style="grid-column:1/-1"><b id="th">0h</b><span>horas líquidas hoje</span></div></div></div>
  <div class="mut" style="margin-top:10px"><b id="gap" class="warn"></b> <span id="errp"></span></div>
  <button class="rs" style="margin-top:12px" onclick="resetHoje()"> Zerar hoje</button></div>
@@ -90,7 +112,7 @@ button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 <div style="grid-column:1/-1"><label>Matéria</label><select id="area" onchange="this.dataset.t=1;autoQc()"></select></div>
 <div><label>Questões feitas</label><input id="qn" type="number" min="0" value="0" oninput="autoQc()"></div>
 <div><label>Acertos</label><input id="qc" type="number" min="0" value="0" oninput="this.dataset.t=1"></div>
-<div><label>Horas líquidas</label><input id="hrs" type="number" step="0.25" min="0" value="0"></div>
+<div><label>Horas estudadas</label><input id="hh" type="number" min="0" value="0" oninput="hmSync()"></div><div><label>Minutos</label><input id="hm" type="number" min="0" max="59" value="0" oninput="hmSync()"></div><div style="grid-column:1/-1"><input id="hrs" type="hidden" value="0"><div class="tabs" style="margin:0"><button class="tab" onclick="addMin(15)">+15 min</button><button class="tab" onclick="addMin(30)">+30 min</button><button class="tab" onclick="addMin(60)">+1 h</button><span class="mut" id="hmt" style="margin-left:auto;align-self:center">0min</span></div></div>
 <div><label>Assunto (opcional)</label><input id="tm" type="text" maxlength="40" placeholder="ex: Herança"></div></div>
 <label style="margin-top:12px;display:flex;gap:8px;align-items:center"><input type="checkbox" id="auto_err" checked style="width:auto"> Criar revisão automática dos erros no caderno</label>
 <button class="go" onclick="add()">Registrar sessão</button><div class="mut" style="margin-top:6px">Acertos são sugeridos pelo seu histórico; é só ajustar.</div>
@@ -98,11 +120,11 @@ button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 </div></div>
 
 <div class="pg" id="p1"><div class="rng" id="rng"></div><div class="grid">
-<div class="card"><h3>Evolução do ranking</h3><svg class="ch" id="c0" viewBox="0 0 320 150"></svg><div class="mut">Quanto mais alto, melhor (de #5000 até #1).</div></div>
-<div class="card"><h3>Questões por dia (<span id="rl">30</span> dias)</h3><svg class="ch" id="c1" viewBox="0 0 320 150"></svg><div class="mut">Azul = bateu a meta diária · cinza = abaixo · linha tracejada = meta.</div></div>
-<div class="card"><h3>% de acerto por dia</h3><svg class="ch" id="c2" viewBox="0 0 320 150"></svg><div class="mut">Linha tracejada = nota de corte alvo.</div></div>
-<div class="card"><h3>Questões acumuladas</h3><svg class="ch" id="c3" viewBox="0 0 320 150"></svg><div class="mut">Azul = você · tracejado = ritmo da meta diária.</div></div>
-<div class="card"><h3>Horas líquidas por dia</h3><svg class="ch" id="c4" viewBox="0 0 320 150"></svg><div class="mut">Soma das horas efetivas de estudo.</div></div>
+<div class="card"><h3>Evolução do ranking</h3><svg class="ch" id="c0" viewBox="0 0 320 190"></svg><div class="mut">Quanto mais alto, melhor (de #5000 até #1).</div></div>
+<div class="card"><h3>Questões por dia (<span id="rl">30</span> dias)</h3><svg class="ch" id="c1" viewBox="0 0 320 190"></svg><div class="mut">Laranja = bateu a meta diária · cinza = abaixo · linha tracejada = meta.</div></div>
+<div class="card"><h3>% de acerto por dia</h3><svg class="ch" id="c2" viewBox="0 0 320 190"></svg><div class="mut">Linha tracejada = nota de corte alvo.</div></div>
+<div class="card"><h3>Questões acumuladas</h3><svg class="ch" id="c3" viewBox="0 0 320 190"></svg><div class="mut">Laranja = você · tracejado = ritmo da meta diária.</div></div>
+<div class="card"><h3>Horas líquidas por dia</h3><svg class="ch" id="c4" viewBox="0 0 320 190"></svg><div class="mut">Soma das horas efetivas de estudo.</div></div>
 <div class="card"><h3>Evolução por grupo (%)</h3><svg class="ch" id="c6" viewBox="0 0 320 150"></svg><div class="chips" id="lg"></div><div class="mut" style="margin-top:6px">Toque nos pontos para ver os valores.</div></div>
 <div class="card"><h3>Onde você investe seu tempo</h3><svg class="ch" id="c7" viewBox="0 0 320 150"></svg><div class="mut" id="dn"></div></div>
 <div class="card"><h3>Por dificuldade</h3><div class="chips" id="dfc"></div><div class="mut" style="margin-top:8px">Se o acerto nas difíceis é baixo, é aí que a nota da prova se decide.</div></div>
@@ -130,12 +152,12 @@ button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 <div class="row r3" id="sin" style="margin-top:10px"></div>
 <button class="go" onclick="simAdd()">Registrar simulado</button>
 <div class="mut" style="margin-top:8px">Informe os acertos em cada bloco. A nota usa o peso de cada matéria na prova.</div></div>
-<div class="card"><h3>Evolução dos simulados</h3><svg class="ch" id="c5" viewBox="0 0 320 150"></svg><div class="chips" id="sst" style="margin-top:8px"></div></div>
+<div class="card"><h3>Evolução dos simulados</h3><svg class="ch" id="c5" viewBox="0 0 320 190"></svg><div class="chips" id="sst" style="margin-top:8px"></div></div>
 <div class="card full"><h3>Histórico de simulados</h3><div style="overflow-x:auto"><table><thead><tr><th>Dia</th><th>Nota/100</th><th>Acertos</th><th>Tempo</th><th>Corte</th><th></th></tr></thead><tbody id="sl"></tbody></table></div></div>
 </div></div>
 
 <div class="pg" id="p5"><div class="grid">
-<div class="card full"><h3>Mapa de dias</h3><div class="heat" id="heat"></div><div class="mut" style="margin-top:8px">Azul forte = meta do dia batida · azul claro = parcial · contorno branco = hoje.</div></div>
+<div class="card full"><h3>Mapa de dias</h3><div class="heat" id="heat"></div><div class="mut" style="margin-top:8px">Laranja forte = meta do dia batida · laranja claro = parcial · contorno branco = hoje.</div></div>
 <div class="card full"><h3>Histórico de sessões</h3><div style="overflow-x:auto"><table><thead><tr><th>Dia</th><th>Matéria</th><th>Dif.</th><th>Assunto</th><th>Q</th><th>Ac</th><th>%</th><th>H</th><th></th><th></th></tr></thead><tbody id="hist"></tbody></table></div></div>
 </div></div>
 
@@ -169,17 +191,17 @@ function nm(a){return LEG[a]||a}
 function pf(x){return (+x).toFixed(1).replace(".",",")+"%"}
 function nf(x){return (+x).toFixed(1).replace(".",",")}
 function fd(d){return d.slice(8)+"/"+d.slice(5,7)}
-function normS(x){x=x||{};x.cfg=Object.assign({},DEF,x.cfg||{});x.log=Array.isArray(x.log)?x.log:[];x.errs=Array.isArray(x.errs)?x.errs:[];x.sims=Array.isArray(x.sims)?x.sims:[];x.start=x.start||td();x.ui=x.ui||{};return x}
+function normS(x){x=x||{};x.cfg=Object.assign({},DEF,x.cfg||{});x.log=Array.isArray(x.log)?x.log:[];x.errs=Array.isArray(x.errs)?x.errs:[];x.sims=Array.isArray(x.sims)?x.sims:[];x.start=x.start||td();if(!x.v10){x.v10=1;x.start=td()}x.ui=x.ui||{};return x}
 function lsLoad(){try{var s=JSON.parse(localStorage.getItem("bbti4"));if(s&&s.log)return normS(s)}catch(e){}try{var o=JSON.parse(localStorage.getItem("bbti3"));if(o&&o.log)return normS(o)}catch(e){}return null}
 var S=lsLoad()||normS({}),ref=null,shown=5000,RNG=30,RM=0,CH={},PL=[],RTIP=[],MM=null;
 function persist(){try{localStorage.setItem("bbti4",JSON.stringify(S))}catch(e){}if(ref){ref.set({s:JSON.stringify(S)}).then(function(){$("sync").textContent=" Salvo na nuvem"}).catch(function(){})}}
 function toast(t){var e=$("toast");e.textContent=t;e.className="s";setTimeout(function(){e.className=""},2600)}
 function go(i){document.querySelectorAll(".pg").forEach(function(p,k){p.className="pg"+(k==i?" on":"")});document.querySelectorAll("#nav button").forEach(function(b,k){b.className=k==i?"on":""});window.scrollTo(0,0)}
-function eff(M){var C=Object.assign({},S.cfg);if(C.auto){var left=Math.max(1,dd(td(),C.exam)),t=M.D[td()]?M.D[td()].q:0,rem=Math.max(0,C.goal-(M.tot.q-t));C.daily=Math.max(10,Math.ceil(rem/left))}return C}
-var INT=[1,3,7,14,30],PRE=[["Padrão","#0c0c0e"],["Preto","#000000"],["Azul noite","#0a1020"],["Roxo","#140c22"],["Verde","#08150f"],["Grafite","#16181c"],["Vinho","#1a0d12"]];
+function eff(M){var C=Object.assign({},S.cfg);if(C.auto){var left=Math.max(1,dd(td(),C.exam)+1),t=M.D[td()]?M.D[td()].q:0,rem=Math.max(0,C.goal-(M.tot.q-t));C.daily=Math.max(10,Math.ceil(rem/left))}return C}
+var INT=[1,3,7,14,30],PRE=[["Padrão","#000000"],["Carvão","#0d0d0d"],["Azul noite","#0a1020"],["Roxo","#140c22"],["Verde","#08150f"],["Grafite","#16181c"],["Vinho","#1a0d12"]];
 function addDays(d,n){var x=new Date(d+"T12:00:00");x.setDate(x.getDate()+n);return td(x)}
 function mix(h,t,a){return"#"+[1,3,5].map(function(k){var c=parseInt(h.slice(k,k+2),16);return("0"+Math.round(c+(t-c)*a).toString(16)).slice(-2)}).join("")}
-function applyTheme(){var bg=(S.ui&&S.ui.bg)||"#0c0c0e",cur=bg,c=[1,3,5].map(function(k){return parseInt(bg.slice(k,k+2),16)}),lum=(.299*c[0]+.587*c[1]+.114*c[2])/255;if(lum>.3)bg=mix(bg,0,1-.3/lum);
+function applyTheme(){var bg=(S.ui&&S.ui.bg)||"#000000",cur=bg,c=[1,3,5].map(function(k){return parseInt(bg.slice(k,k+2),16)}),lum=(.299*c[0]+.587*c[1]+.114*c[2])/255;if(lum>.3)bg=mix(bg,0,1-.3/lum);
  var st=document.documentElement.style;st.setProperty("--bg",bg);st.setProperty("--bg2",mix(bg,255,.05));st.setProperty("--card",mix(bg,255,.07));st.setProperty("--card2",mix(bg,255,.12));st.setProperty("--line",mix(bg,255,.1));$("cbg").value=bg;
  $("sws").innerHTML=PRE.map(function(p){return'<button class="sw'+(cur==p[1]?" on":"")+'" style="background:'+p[1]+'" title="'+p[0]+'" onclick="setBg(\''+p[1]+'\')"></button>'}).join("")}
 function setBg(v,tmp){S.ui=S.ui||{};if(v==null)delete S.ui.bg;else S.ui.bg=v;applyTheme();if(!tmp){persist();toast(v==null?"Fundo padrão":"Fundo alterado")}}
@@ -195,17 +217,30 @@ function tmGet(){try{return JSON.parse(localStorage.getItem("bbti_tm"))||{run:0,
 function tmSet(t){try{localStorage.setItem("bbti_tm",JSON.stringify(t))}catch(e){}}
 function tmMs(){var t=tmGet();return t.acc+(t.run?Date.now()-t.st:0)}
 function tmToggle(){var t=tmGet();if(t.run){t.acc+=Date.now()-t.st;t.run=0}else{t.st=Date.now();t.run=1}tmSet(t);tmDraw()}
-function tmUse(){var ms=tmMs();if(ms<30000){toast("Estude um pouco mais antes de usar");return}$("hrs").value=Math.round(ms/36e5*100)/100;tmSet({run:0,st:0,acc:0});tmDraw();toast("Horas preenchidas: "+$("hrs").value+"h")}
+function fh(h){var m=Math.round(Math.max(0,+h||0)*60);return m<60?m+"min":Math.floor(m/60)+"h"+(m%60?("0"+m%60).slice(-2)+"min":"")}
+function hmSync(){var m=Math.max(0,Math.floor(+$("hh").value||0))*60+Math.min(59,Math.max(0,Math.floor(+$("hm").value||0)));$("hrs").value=m/60;$("hmt").textContent=fh(m/60)}
+function setHrs(h){var m=Math.round((+h||0)*60);$("hh").value=Math.floor(m/60);$("hm").value=m%60;hmSync()}
+function addMin(n){setHrs(Math.round((+$("hrs").value||0)*60+n)/60)}
+function paceAt(M,C,k){var p0=0;Object.keys(M.D).forEach(function(x){if(x<S.start)p0+=M.D[x].q});return Math.round(Math.min(C.goal,p0+(C.goal-p0)*(dd(S.start,k)+1)/Math.max(1,dd(S.start,C.exam)+1)))}
+function perfRender(M,C){var tdy=td(),q7=0,c7=0,h7=0,best=0,bd="",i,st=0,d=new Date();
+for(i=0;i<7;i++){var x=new Date();x.setDate(x.getDate()-i);var e=M.D[td(x)];if(e){q7+=e.q;c7+=e.c;h7+=e.h}}
+Object.keys(M.D).forEach(function(k){if(M.D[k].q>best){best=M.D[k].q;bd=k}});
+if(!(M.D[tdy]&&M.D[tdy].q>0))d.setDate(d.getDate()-1);while(M.D[td(d)]&&M.D[td(d)].q>0){st++;d.setDate(d.getDate()-1)}
+var day=Math.max(1,dd(S.start,tdy)+1),tot=Math.max(day,dd(S.start,C.exam)+1),dl=Math.max(1,dd(tdy,C.exam)),rem=Math.max(0,C.goal-M.tot.q),avg=q7/7,proj=Math.round(M.tot.q+avg*dl),need=Math.ceil(rem/dl);
+var it=[[day+"/"+tot,"dia da jornada"],[st+" d","sequência"],[nf(avg),"questões/dia (7d)"],[fh(h7/7),"tempo/dia (7d)"],[q7?pf(c7/q7*100):"–","acerto (7d)"],[M.tot.h>0?nf(M.tot.q/M.tot.h):"–","questões/hora"],[best?best+" ("+fd(bd)+")":"–","melhor dia"],[need+"/dia","ritmo necessário"]];
+$("perf").innerHTML=it.map(function(a){return"<div><b>"+a[0]+"</b><span>"+a[1]+"</span></div>"}).join("");
+$("perfm").textContent=!q7?"Registre sessões para ver a projeção até a prova.":proj>=C.goal?"No ritmo atual você chega a "+proj.toLocaleString("pt-BR")+" questões: meta fechada com folga.":"No ritmo atual você chega a "+proj.toLocaleString("pt-BR")+" de "+C.goal.toLocaleString("pt-BR")+". Para fechar, suba para "+need+" questões por dia."}
+function tmUse(){var ms=tmMs();if(ms<30000){toast("Estude um pouco mais antes de usar");return}setHrs(ms/36e5);tmSet({run:0,st:0,acc:0});tmDraw();toast("Tempo preenchido: "+fh($("hrs").value))}
 function tmDraw(){var s=Math.floor(tmMs()/1000),f=function(n){return("0"+n).slice(-2)};$("tmv").textContent=f(Math.floor(s/3600))+":"+f(Math.floor(s%3600/60))+":"+f(s%60);$("tmb").textContent=tmGet().run?"Pausar":"Iniciar"}
 setInterval(tmDraw,1000);tmDraw();
 function sm(p){if(p.length<3)return"M"+p.map(function(a){return a[0].toFixed(1)+","+a[1].toFixed(1)}).join("L");var d="M"+p[0][0].toFixed(1)+","+p[0][1].toFixed(1),k=.15;for(var i=0;i<p.length-1;i++){var a=p[i-1]||p[i],b=p[i],c=p[i+1],e=p[i+2]||c;d+="C"+(b[0]+(c[0]-a[0])*k).toFixed(1)+","+(b[1]+(c[1]-a[1])*k).toFixed(1)+" "+(c[0]-(e[0]-b[0])*k).toFixed(1)+","+(c[1]-(e[1]-b[1])*k).toFixed(1)+" "+c[0].toFixed(1)+","+c[1].toFixed(1)}return d}
-function multi(id,labels,series){var W=320,H=150,L=34,R=8,T=10,B=22,pw=W-L-R,ph=H-T-B,n=labels.length,s="",X=function(i){return L+i*pw/Math.max(1,n-1)},Y=function(v){return T+ph-v/100*ph};
+function multi(id,labels,series){var W=320,H=190,L=34,R=8,T=10,B=22,pw=W-L-R,ph=H-T-B,n=labels.length,s="",X=function(i){return L+i*pw/Math.max(1,n-1)},Y=function(v){return T+ph-v/100*ph};
  for(var k=0;k<=4;k++){var y=Y(25*k);s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+y+'" y2="'+y+'" stroke="rgba(255,255,255,.08)"/><text x="'+(L-4)+'" y="'+(y+4)+'" text-anchor="end" fill="#8e8e93" font-size="10">'+25*k+'%</text>'}
- series.forEach(function(sr){s+='<path d="'+sm(sr.v.map(function(v,i){return[X(i),Y(v)]}))+'" fill="none" stroke="'+sr.c+'" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="'+X(n-1)+'" cy="'+Y(sr.v[n-1])+'" r="4.5" fill="'+sr.c+'"/>'});
+ series.forEach(function(sr){s+='<path d="'+sm(sr.v.map(function(v,i){return[X(i),Y(v)]}))+'" fill="none" stroke="'+sr.c+'" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" pathLength="1" style="filter:drop-shadow(0 0 5px '+sr.c+')"/><circle cx="'+X(n-1)+'" cy="'+Y(sr.v[n-1])+'" r="4.5" fill="'+sr.c+'"/>'});
  CH[id]=labels.map(function(l,i){return l+"<br>"+series.map(function(sr){return'<span style="color:'+sr.c+'">'+sr.n+" <b>"+pf(sr.v[i])+"</b></span>"}).join(" · ")});
  var cw=pw/Math.max(1,n);for(var j=0;j<n;j++)s+='<rect class="hit" x="'+(X(j)-cw/2)+'" y="'+T+'" width="'+cw+'" height="'+ph+'" onclick="tip(event,\''+id+'\','+j+')"/>';
  $(id).innerHTML=s}
-function donut(M){var g={TI:0,HU:0,EX:0},ide={TI:0,HU:0,EX:0},nmx={TI:"TI",HU:"Humanas",EX:"Exatas"},col={TI:"#0a84ff",HU:"#5ac8fa",EX:"#8e8e93"},CC=2*Math.PI*52,off=0,s='<circle cx="80" cy="75" r="52" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="22"/>',tt,tx="",adv=[];
+function donut(M){var g={TI:0,HU:0,EX:0},ide={TI:0,HU:0,EX:0},nmx={TI:"TI",HU:"Humanas",EX:"Exatas"},col={TI:"#ff6a00",HU:"#ffffff",EX:"#7a7a7a"},CC=2*Math.PI*52,off=0,s='<circle cx="80" cy="75" r="52" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="22"/>',tt,tx="",adv=[];
  SUB.forEach(function(x){g[x[2]]+=M.A[x[0]].q;ide[x[2]]+=x.share*100});tt=g.TI+g.HU+g.EX;CH.c7=[];
  ["TI","HU","EX"].forEach(function(k,j){var f=tt?g[k]/tt:0,len=f*CC;CH.c7.push(nmx[k]+": <b>"+g[k]+"</b> questões ("+pf(f*100)+") · vale "+nf(ide[k])+"% da prova");
   if(len>0)s+='<circle cx="80" cy="75" r="52" fill="none" stroke="'+col[k]+'" stroke-width="22" stroke-dasharray="'+len+" "+(CC-len)+'" stroke-dashoffset="'+(-off)+'" transform="rotate(-90 80 75)" style="cursor:pointer" onclick="tip(event,\'c7\','+j+')"/>';
@@ -222,7 +257,7 @@ $("sin").innerHTML=Object.keys(BLK).map(function(k){return'<div><label>'+BN[k]+'
 function evoOf(cr,hrs){var E={},G={TI:0,HU:0,EX:0},GS={TI:0,HU:0,EX:0},all=0,goal=Math.max(100,S.cfg.goal);
  SUB.forEach(function(s){var e=Math.min(1,(cr[s[0]]||0)/(goal*s.share*.8));E[s[0]]=e;G[s[2]]+=e*s.share;GS[s[2]]+=s.share;all+=e*s.share});
  var g={};for(var k in G)g[k]=G[k]/GS[k];var P=Math.min(1,.85*all+.15*Math.min(1,hrs/Math.max(1,S.cfg.hrs)));
- return{E:E,G:g,all:all,P:P,rank:Math.max(1,Math.round(Math.pow(START,1-P)))}}
+ return{E:E,G:g,all:all,P:P,rank:Math.max(1,Math.round(Math.pow(START,1-Math.pow(P,1.5))))}}
 function model(){var M={A:{},D:{},dfs:{F:{q:0,c:0},M:{q:0,c:0},D:{q:0,c:0}},tot:{q:0,c:0,h:0},cr:{},hist:[],gh:[],B:{}};
  SUB.forEach(function(s){M.A[s[0]]={q:0,c:0};M.B[s[3]]=M.B[s[3]]||{q:0,c:0}});
  S.log.forEach(function(e){var a=nm(e.a),m=(DF[e.df]||DF.M)[1];M.tot.q+=e.q;M.tot.c+=e.c;M.tot.h+=e.h;
@@ -232,17 +267,17 @@ function model(){var M={A:{},D:{},dfs:{F:{q:0,c:0},M:{q:0,c:0},D:{q:0,c:0}},tot:
   var ee=evoOf(M.cr,M.tot.h);M.hist.push(ee.rank);M.gh.push(ee)});
  M.ev=evoOf(M.cr,M.tot.h);M.nota=0;for(var k in BLK){var b=M.B[k];M.nota+=BLK[k][0]*BLK[k][1]*(b.q?b.c/b.q:0)}
  return M}
-function tierOf(r){return r>3000?["Ferro","#5ac8fa"]:r>1500?["Bronze","#5ac8fa"]:r>700?["Prata","#5ac8fa"]:r>300?["Ouro","#5ac8fa"]:r>100?["Platina","#5ac8fa"]:r>10?["Diamante","#5ac8fa"]:r>1?["Mestre","#5ac8fa"]:["Lenda","#5ac8fa"]}
+function tierOf(r){return r>3000?["Ferro","#ff9142"]:r>1500?["Bronze","#ff9142"]:r>700?["Prata","#ff9142"]:r>300?["Ouro","#ff9142"]:r>100?["Platina","#ff9142"]:r>10?["Diamante","#ff9142"]:r>1?["Mestre","#ff9142"]:["Lenda","#ff9142"]}
 function countTo(n){var a=shown,t0=performance.now();shown=n;(function f(t){var k=Math.min(1,(t-t0)/700);$("rank").textContent="#"+Math.round(a+(n-a)*k);if(k<1)requestAnimationFrame(f)})(t0)}
 function simScore(b){var s=0;for(var k in BLK)s+=Math.min(BLK[k][0],+b[k]||0)*BLK[k][1];return s}
 
 // ---------- ações ----------
 function add(){var q=Math.max(0,Math.floor(+$("qn").value||0)),c=Math.min(q,Math.max(0,Math.floor(+$("qc").value||0))),h=Math.max(0,+$("hrs").value||0);if(!h&&tmMs()>=30000){h=Math.round(tmMs()/36e5*100)/100;tmSet({run:0,st:0,acc:0});tmDraw()}if(!q&&!h){toast("Preencha questões ou horas");return}
  var r0=model().ev.rank;S.log.push({d:$("dia").value||td(),a:$("area").value,q:q,c:c,h:h,t:$("tm").value.trim(),df:$("df").value});if($("auto_err").checked&&q>c)S.errs.push({id:Date.now(),d:td(),a:$("area").value,t:"Revisar "+(q-c)+" erro"+(q-c>1?"s":"")+" de "+IDX[$("area").value][1]+($("tm").value.trim()?" ("+$("tm").value.trim()+")":""),w:"Revisão automática",r:0,st:0,nx:td()});
- S.log.sort(function(a,b){return a.d<b.d?-1:a.d>b.d?1:0});persist();$("qn").value=0;$("qc").value=0;delete $("qc").dataset.t;delete $("area").dataset.t;$("hrs").value=0;$("tm").value="";render();
+ S.log.sort(function(a,b){return a.d<b.d?-1:a.d>b.d?1:0});persist();$("qn").value=0;$("qc").value=0;delete $("qc").dataset.t;delete $("area").dataset.t;setHrs(0);$("tm").value="";render();
  var r1=model().ev.rank;toast(r1<r0?"Rank #"+r0+" → #"+r1+" ":"Sessão registrada!")}
 function del(i){S.log.splice(i,1);persist();render()}
-function edit(i){var e=S.log[i];if(!e)return;$("dia").value=e.d;$("area").value=nm(e.a);$("df").value=e.df||"M";$("qn").value=e.q;$("qc").value=e.c;$("hrs").value=e.h;$("tm").value=e.t||"";S.log.splice(i,1);persist();render();go(0);toast("Corrija os dados e registre de novo")}
+function edit(i){var e=S.log[i];if(!e)return;$("dia").value=e.d;$("area").value=nm(e.a);$("df").value=e.df||"M";$("qn").value=e.q;$("qc").value=e.c;setHrs(e.h);$("tm").value=e.t||"";S.log.splice(i,1);persist();render();go(0);toast("Corrija os dados e registre de novo")}
 function resetAll(){if(confirm("Resetar TUDO? Apaga sessões, erros e simulados, volta o rank para #5000 e reinicia a contagem a partir de hoje. As metas são mantidas.")){S=normS({cfg:S.cfg,ui:S.ui,lb:S.lb});shown=5000;persist();render();toast("Tudo zerado. Bora recomeçar!")}}
 function resetHoje(){var t=td(),n=S.log.filter(function(e){return e.d==t}).length;if(!n){toast("Hoje já está zerado");return}if(confirm("Zerar o que você lançou hoje ("+n+" sessões)?")){S.log=S.log.filter(function(e){return e.d!=t});persist();render();toast("Hoje zerado!")}}
 function setR(i){RG=i;$("t0").className="tab"+(i?"":" on");$("t1").className="tab"+(i?" on":"");render()}
@@ -258,15 +293,15 @@ async function expo(){S.lb=Date.now();var data=JSON.stringify(S);$("bk").value=d
 function impo(){try{var p=JSON.parse($("bk").value);if(!p||!Array.isArray(p.log))throw 0;if(!confirm("Importar e SUBSTITUIR os dados atuais?"))return;S=normS(p);persist();render();toast("Backup importado")}catch(e){toast("Texto inválido. Cole o backup completo.")}}
 
 // ---------- gráficos ----------
-function chart(id,vals,o){var W=320,H=150,L=34,R=8,T=10,B=22,n=vals.length,pw=W-L-R,ph=H-T-B,s="",
+function chart(id,vals,o){var W=320,H=190,L=34,R=8,T=10,B=22,n=vals.length,pw=W-L-R,ph=H-T-B,s="",
  mx=o.max||Math.max.apply(null,vals.map(function(v){return v||0}).concat(o.goalArr||[],[o.goal||0,1]))*1.15;
  var X=function(i){return o.bar?L+(i+.5)*pw/n:L+i*pw/Math.max(1,n-1)},Y=function(v){return T+ph-v/mx*ph};
  for(var k=0;k<=4;k++){var v=mx*k/4,y=Y(v);s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+y+'" y2="'+y+'" stroke="rgba(255,255,255,.08)"/><text x="'+(L-4)+'" y="'+(y+4)+'" text-anchor="end" fill="#8e8e93" font-size="10">'+(o.fmt?o.fmt(v):Math.round(v))+'</text>'}
  if(!o.nolab&&n){var st=Math.ceil(n/6);o.lab.forEach(function(d,i){if(i%st==0||i==n-1)s+='<text x="'+X(i)+'" y="'+(H-6)+'" text-anchor="middle" fill="#8e8e93" font-size="10">'+fd(d)+'</text>'})}
- if(o.bar){var bw=pw/n*.7;vals.forEach(function(v,i){s+='<rect x="'+(X(i)-bw/2)+'" y="'+Y(v)+'" width="'+bw+'" height="'+Math.max(0,T+ph-Y(v))+'" rx="4" fill="'+(o.col?o.col(v):"#0a84ff")+'"/>'})}
+ if(o.bar){var bw=pw/n*.66,cs={},df="";vals.forEach(function(v,i){var c=o.col?o.col(v):"#ff6a00";cs[c]=1;s+='<rect x="'+(X(i)-bw/2)+'" y="'+Y(v)+'" width="'+bw+'" height="'+Math.max(0,T+ph-Y(v))+'" rx="'+Math.min(5,bw/2)+'" fill="url(#b'+id+c.slice(1)+')"/>'});Object.keys(cs).forEach(function(c){df+='<linearGradient id="b'+id+c.slice(1)+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+c+'"/><stop offset="1" stop-color="'+c+'" stop-opacity=".3"/></linearGradient>'});s='<defs>'+df+'</defs>'+s}
  else{var p=[];vals.forEach(function(v,i){if(v!=null)p.push([X(i),Y(v)])});if(p.length){var ln=p.map(function(a){return a[0].toFixed(1)+","+a[1].toFixed(1)}).join(" ");
-  s+='<defs><linearGradient id="g'+id+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+o.col+'" stop-opacity=".32"/><stop offset="1" stop-color="'+o.col+'" stop-opacity="0"/></linearGradient></defs><path d="'+sm(p)+"L"+p[p.length-1][0].toFixed(1)+","+(T+ph)+"L"+p[0][0].toFixed(1)+","+(T+ph)+'Z" fill="url(#g'+id+')"/><path d="'+sm(p)+'" fill="none" stroke="'+o.col+'" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>';
-  p.forEach(function(a,i){if(p.length<40||i==p.length-1)s+='<circle cx="'+a[0]+'" cy="'+a[1]+'" r="'+(i==p.length-1?4.5:2.5)+'" fill="'+o.col+'"/>'})}}
+  s+='<defs><linearGradient id="g'+id+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+o.col+'" stop-opacity=".32"/><stop offset="1" stop-color="'+o.col+'" stop-opacity="0"/></linearGradient></defs><path d="'+sm(p)+"L"+p[p.length-1][0].toFixed(1)+","+(T+ph)+"L"+p[0][0].toFixed(1)+","+(T+ph)+'Z" fill="url(#g'+id+')"/><path d="'+sm(p)+'" fill="none" stroke="'+o.col+'" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" pathLength="1" style="filter:drop-shadow(0 0 5px '+o.col+')"/>';
+  p.forEach(function(a,i){var la=i==p.length-1;if(p.length<40||la)s+=(la?'<circle class="pulse" cx="'+a[0]+'" cy="'+a[1]+'" r="9" fill="'+o.col+'" opacity=".25"/>':"")+'<circle cx="'+a[0]+'" cy="'+a[1]+'" r="'+(la?4.5:2.5)+'" fill="'+o.col+'" stroke="#000" stroke-width="1.5"/>'})}}
  if(o.goalArr&&n)s+='<polyline points="'+o.goalArr.map(function(g,i){return X(i)+","+Y(g)}).join(" ")+'" fill="none" stroke="#8e8e93" stroke-width="2" stroke-dasharray="5 4"/>';
  if(o.goal)s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+Y(o.goal)+'" y2="'+Y(o.goal)+'" stroke="'+(o.gc||"#fff")+'" stroke-width="1.5" stroke-dasharray="5 4"/>';
  if(o.tip){CH[id]=o.tip;var cw=pw/Math.max(1,n);for(var j=0;j<n;j++)s+='<rect class="hit" x="'+(X(j)-cw/2)+'" y="'+T+'" width="'+cw+'" height="'+ph+'" onclick="tip(event,\''+id+'\','+j+')"/>'}
@@ -275,25 +310,25 @@ function radar(names,vals){var N=names.length,cx=170,cy=140,R=82,s="",P=function
  [.25,.5,.75,1].forEach(function(f){s+='<polygon points="'+names.map(function(_,i){return P(i,R*f).join(",")}).join(" ")+'" fill="none" stroke="rgba(255,255,255,.08)"/>'});
  names.forEach(function(_,i){var p=P(i,R);s+='<line x1="'+cx+'" y1="'+cy+'" x2="'+p[0]+'" y2="'+p[1]+'" stroke="rgba(255,255,255,.08)"/>'});
  var dp=vals.map(function(v,i){return P(i,R*Math.max(.02,v))});
- s+='<polygon points="'+dp.map(function(a){return a.join(",")}).join(" ")+'" fill="rgba(10,132,255,.28)" stroke="#0a84ff" stroke-width="2.5"/>';
- dp.forEach(function(a,i){s+='<circle cx="'+a[0]+'" cy="'+a[1]+'" r="5.5" fill="#fff" stroke="#0a84ff" stroke-width="2" style="cursor:pointer" onclick="showTip(event,RTIP['+i+'])"/>'});
+ s+='<polygon points="'+dp.map(function(a){return a.join(",")}).join(" ")+'" fill="rgba(255,106,0,.28)" stroke="#ff6a00" stroke-width="2.5"/>';
+ dp.forEach(function(a,i){s+='<circle cx="'+a[0]+'" cy="'+a[1]+'" r="5.5" fill="#fff" stroke="#ff6a00" stroke-width="2" style="cursor:pointer" onclick="showTip(event,RTIP['+i+'])"/>'});
  names.forEach(function(t,i){var p=P(i,R+10),c=Math.cos(-Math.PI/2+2*Math.PI*i/N),sn=Math.sin(-Math.PI/2+2*Math.PI*i/N),an=c>.3?"start":c<-.3?"end":"middle",y=p[1]+(sn>.3?12:sn<-.3?-8:0);
   s+='<text x="'+p[0]+'" y="'+y+'" text-anchor="'+an+'" fill="#f5f5f7" font-size="11" font-weight="600" style="cursor:pointer" onclick="pickArea('+i+')">'+t+'</text><text x="'+p[0]+'" y="'+(y+12)+'" text-anchor="'+an+'" fill="#8e8e93" font-size="10.5" font-weight="600">'+pf(vals[i]*100)+'</text>'});
  $("radar").innerHTML=s}
 
 // ---------- tela ----------
-function render(){var M=model(),C=eff(M),tdy=td(),EV=M.ev,T=M.D[tdy]||{q:0,c:0,h:0},r=EV.rank,tr=tierOf(r),i;
+function render(){var M=model(),C=eff(M),tdy=td(),EV=M.ev,T=M.D[tdy]||{q:0,c:0,h:0},r=EV.rank,tr=tierOf(r),i;perfRender(M,C);
  countTo(r);$("rank").style.color=tr[1];$("tier").textContent=tr[0];$("tier").style.color=tr[1];
  $("pp").textContent=pf(EV.all*100);$("pbar").style.width=EV.all*100+"%";
  ["TI","HU","EX"].forEach(function(g){$("e"+g).textContent=pf(EV.G[g]*100);$("b"+g).style.width=EV.G[g]*100+"%"});
  $("gl").textContent=C.goal.toLocaleString("pt-BR");var gp=Math.min(100,M.tot.q/C.goal*100);$("gq").textContent=M.tot.q.toLocaleString("pt-BR");$("gp").textContent=pf(gp);$("gbar").style.width=gp+"%";
- $("aq").textContent=M.tot.q;$("aa").textContent=pf(M.tot.q?M.tot.c/M.tot.q*100:0);$("ah").textContent=(+M.tot.h.toFixed(1))+"h";$("est").textContent=nf(M.nota);
+ $("aq").textContent=M.tot.q;$("aa").textContent=pf(M.tot.q?M.tot.c/M.tot.q*100:0);$("ah").textContent=fh(M.tot.h);$("est").textContent=nf(M.nota);
  var best=null;SUB.forEach(function(s){var gain=s.share*(1-EV.E[s[0]]);if(!best||gain>best[1])best=[s[0],gain,s.share]});
  $("foco").textContent="Maior ganho agora: "+best[0]+" (vale "+nf(best[2]*100)+" pts da prova). Nota estimada "+nf(M.nota)+" · corte alvo "+C.cut+".";
  var rem=Math.max(0,C.goal-M.tot.q),dl=Math.max(0,dd(tdy,C.exam)),am=[];if(rem>0&&dl>0)am.push("Ritmo para fechar "+C.goal.toLocaleString("pt-BR")+": <b>"+Math.ceil(rem/dl)+"/dia</b> ("+dl+" dias)");
  if(M.tot.q>0){var dbk=S.lb?(Date.now()-S.lb)/864e5:99;if(dbk>=7)am.push('<button class="x" onclick="expo();go(6)"> Fazer backup</button> '+(S.lb?"há "+Math.floor(dbk)+" dias sem backup":"nunca feito"))}$("auto").innerHTML=am.join(" · ");
  $("rt").textContent=T.q;$("rd").textContent="de "+C.daily;$("rg").style.strokeDashoffset=326.7*(1-Math.min(1,T.q/C.daily));
- $("tc").textContent=T.c;$("ta").textContent=pf(T.q?T.c/T.q*100:0);$("th").textContent=(+T.h.toFixed(2))+"h";
+ $("tc").textContent=T.c;$("ta").textContent=pf(T.q?T.c/T.q*100:0);$("th").textContent=fh(T.h);
  $("gap").textContent=T.q>=C.daily?"Meta batida! ":"Faltam "+(C.daily-T.q)+" questões hoje.";
  var pend=S.errs.filter(function(e){return!e.r&&(!e.nx||e.nx<=tdy)}).length;$("errp").textContent=pend?"· "+pend+" erros para revisar no caderno.":"";
  var PRI={"Banco de Dados SQL":2.5,"Java":1.6,"Python":1.6,"Arquitetura e Integração (APIs, SOA, Mensageria)":1.4,"NoSQL e Big Data":1.4,"Ciência de Dados e IA":1.3,"Estrutura de Dados e Algoritmos":1.1},sc4=function(s){return s.share*(1-EV.E[s[0]])*(PRI[s[0]]||1)},byS=function(a,b){return sc4(b)-sc4(a)},gaps=SUB.filter(function(s){return s[2]=="TI"&&EV.E[s[0]]<1}).sort(byS).slice(0,3).concat(SUB.filter(function(s){return s[2]=="HU"&&EV.E[s[0]]<1}).sort(byS).slice(0,1)).map(function(s){return{n:s[0]}}),lf=Math.max(0,C.daily-T.q),sg=gaps.length,phh="";
@@ -309,33 +344,33 @@ function render(){var M=model(),C=eff(M),tdy=td(),EV=M.ev,T=M.D[tdy]||{q:0,c:0,h
  var ds=[];for(i=RNG-1;i>=0;i--){var x=new Date();x.setDate(x.getDate()-i);ds.push(td(x))}
  var pre=0;Object.keys(M.D).forEach(function(k){if(k<ds[0])pre+=M.D[k].q});
  var qs=ds.map(function(k){return M.D[k]?M.D[k].q:0}),cu=[],run=pre;qs.forEach(function(v){run+=v;cu.push(run)});
- chart("c1",qs,{bar:1,lab:ds,goal:C.daily,max:Math.max(C.daily*1.15,Math.max.apply(null,qs)*1.1),col:function(v){return v>=C.daily?"#0a84ff":"#636366"},tip:ds.map(function(k,i){return fd(k)+": <b>"+qs[i]+"</b> questões"+(qs[i]>=C.daily?" ✓":"")})});
- chart("c2",ds.map(function(k){return M.D[k]&&M.D[k].q?M.D[k].c/M.D[k].q*100:null}),{lab:ds,max:100,goal:C.cut,gc:"#8e8e93",col:"#0a84ff",fmt:function(v){return Math.round(v)+"%"},tip:ds.map(function(k){var d=M.D[k];return fd(k)+": "+(d&&d.q?"<b>"+pf(d.c/d.q*100)+"</b> ("+d.c+"/"+d.q+")":"sem questões")})});
- chart("c3",cu,{lab:ds,col:"#0a84ff",goalArr:ds.map(function(k){return k<S.start?0:pre+(dd(S.start,k)+1)*C.daily}),tip:ds.map(function(k,i){return fd(k)+": <b>"+cu[i]+"</b> acumuladas"})});
- chart("c4",ds.map(function(k){return M.D[k]?M.D[k].h:0}),{bar:1,lab:ds,col:function(){return"#0a84ff"},fmt:function(v){return +v.toFixed(1)+"h"},tip:ds.map(function(k){return fd(k)+": <b>"+(M.D[k]?+M.D[k].h.toFixed(2):0)+"h</b>"})});
- var hs=[5000].concat(M.hist);chart("c0",hs.map(function(h){return(1-Math.log(h)/Math.log(5000))*100}),{lab:hs.map(function(){return"0000-00-00"}),nolab:1,max:100,col:"#0a84ff",fmt:function(v){return"#"+Math.max(1,Math.round(Math.pow(5000,1-v/100)))},tip:hs.map(function(h,i){return i?"Sessão "+i+": <b>#"+h+"</b>":"Início: <b>#5000</b>"})});
+ chart("c1",qs,{bar:1,lab:ds,goal:C.daily,max:Math.max(C.daily*1.15,Math.max.apply(null,qs)*1.1),col:function(v){return v>=C.daily?"#ff6a00":"#636366"},tip:ds.map(function(k,i){return fd(k)+": <b>"+qs[i]+"</b> questões"+(qs[i]>=C.daily?" ✓":"")})});
+ chart("c2",ds.map(function(k){return M.D[k]&&M.D[k].q?M.D[k].c/M.D[k].q*100:null}),{lab:ds,max:100,goal:C.cut,gc:"#8e8e93",col:"#ff6a00",fmt:function(v){return Math.round(v)+"%"},tip:ds.map(function(k){var d=M.D[k];return fd(k)+": "+(d&&d.q?"<b>"+pf(d.c/d.q*100)+"</b> ("+d.c+"/"+d.q+")":"sem questões")})});
+ chart("c3",cu,{lab:ds,col:"#ff6a00",goalArr:ds.map(function(k){return k<S.start?0:paceAt(M,C,k)}),tip:ds.map(function(k,i){return fd(k)+": <b>"+cu[i]+"</b> acumuladas"})});
+ chart("c4",ds.map(function(k){return M.D[k]?M.D[k].h:0}),{bar:1,lab:ds,col:function(){return"#ff6a00"},fmt:function(v){return +v.toFixed(1)+"h"},tip:ds.map(function(k){return fd(k)+": <b>"+fh(M.D[k]?M.D[k].h:0)+"</b>"})});
+ var hs=[5000].concat(M.hist);chart("c0",hs.map(function(h){return(1-Math.log(h)/Math.log(5000))*100}),{lab:hs.map(function(){return"0000-00-00"}),nolab:1,max:100,col:"#ff6a00",fmt:function(v){return"#"+Math.max(1,Math.round(Math.pow(5000,1-v/100)))},tip:hs.map(function(h,i){return i?"Sessão "+i+": <b>#"+h+"</b>":"Início: <b>#5000</b>"})});
  var gl=["Início"].concat(M.gh.map(function(_,j){return"Sessão "+(j+1)})),gv=function(k){return[0].concat(M.gh.map(function(e){return e.G[k]*100}))};
- multi("c6",gl,[{n:"TI",c:"#0a84ff",v:gv("TI")},{n:"Humanas",c:"#5ac8fa",v:gv("HU")},{n:"Exatas",c:"#8e8e93",v:gv("EX")}]);
- $("lg").innerHTML=[["TI","#0a84ff"],["Humanas","#5ac8fa"],["Exatas","#8e8e93"]].map(function(x){return'<div class="chip" style="color:'+x[1]+'">● '+x[0]+"</div>"}).join("");donut(M);
+ multi("c6",gl,[{n:"TI",c:"#ff6a00",v:gv("TI")},{n:"Humanas",c:"#ffffff",v:gv("HU")},{n:"Exatas",c:"#7a7a7a",v:gv("EX")}]);
+ $("lg").innerHTML=[["TI","#ff6a00"],["Humanas","#ffffff"],["Exatas","#7a7a7a"]].map(function(x){return'<div class="chip" style="color:'+x[1]+'">● '+x[0]+"</div>"}).join("");donut(M);
  $("dfc").innerHTML=["F","M","D"].map(function(k){var f=M.dfs[k];return'<div class="chip">'+DF[k][0]+": <b>"+f.q+"</b> questões · <b>"+pf(f.q?f.c/f.q*100:0)+"</b></div>"}).join("");
  // matérias
  var gs=RG?SUB.slice(12):SUB.slice(0,12);RTIP=gs.map(function(g){var a=M.A[g[0]];return g[0]+": acerto <b>"+pf(a.q?a.c/a.q*100:0)+"</b> · evolução <b>"+pf(EV.E[g[0]]*100)+"</b> · "+a.q+" questões"});$("rm").textContent=RM?"Evolução":"Acerto";radar(gs.map(function(g){return g[1]}),gs.map(function(g){var a=M.A[g[0]];return RM?EV.E[g[0]]:(a.q?a.c/a.q:0)}));
  var h="",cg="";SUB.forEach(function(s){if(s[2]!=cg){cg=s[2];var gsh=0;SUB.forEach(function(z){if(z[2]==cg)gsh+=z.share});h+='<div class="gh"><span>'+GN[cg]+" · vale "+nf(gsh*100)+" pts</span><span>"+pf(EV.G[cg]*100)+"</span></div>"}
   var a=M.A[s[0]],ac=a.q?a.c/a.q*100:0,ev=EV.E[s[0]]*100,tq=Math.round(C.goal*s.share);
-  h+='<div class="ar" onclick="selArea(\''+s[0]+'\')"><div><span>'+s[0]+'</span><b style="color:'+(ev>=100?"#5ac8fa":"#f5f5f7")+'">'+pf(ev)+'</b></div><div class="bar"><i class="'+(ac>=C.cut&&a.q?"bt":"bo")+'" style="width:'+ev+'%"></i></div><small>acerto '+pf(ac)+" · "+a.q+" de "+tq+" questões · vale "+nf(s.share*100)+" pts</small></div>"});
- $("al").innerHTML=h;$("weak").textContent="Evolução = acertos ponderados pela dificuldade em relação à meta da matéria. Barra azul = acerto acima do corte, cinza = abaixo.";
+  h+='<div class="ar" onclick="selArea(\''+s[0]+'\')"><div><span>'+s[0]+'</span><b style="color:'+(ev>=100?"#ff9142":"#f5f5f7")+'">'+pf(ev)+'</b></div><div class="bar"><i class="'+(ac>=C.cut&&a.q?"bt":"bo")+'" style="width:'+ev+'%"></i></div><small>acerto '+pf(ac)+" · "+a.q+" de "+tq+" questões · vale "+nf(s.share*100)+" pts</small></div>"});
+ $("al").innerHTML=h;$("weak").textContent="Evolução = acertos ponderados pela dificuldade em relação à meta da matéria. Barra laranja = acerto acima do corte, cinza = abaixo.";
  // erros
  var f=$("ef").value,rows="",cm={};S.errs.forEach(function(e,i){cm[e.w]=(cm[e.w]||0)+1;if(f=="a"||(!e.r&&(!e.nx||e.nx<=tdy)))rows=_er(e,i)+rows});
  function _er(e,i){return"<tr><td>"+fd(e.d)+"</td><td class='l'>"+esc(nm(e.a))+"</td><td class='l'>"+esc(e.t)+"</td><td class='l'>"+esc(e.w)+"</td><td><button class='x' onclick='errTog("+i+")'>"+(e.r?"✓":"○")+"</button><div class='mut' style='font-size:11px'>"+(e.r?"dominado":e.nx&&e.nx>tdy?"volta "+fd(e.nx):"revisar hoje")+"</div></td><td><button class='x' onclick='errDel("+i+")'>x</button></td></tr>"}
  $("erl").innerHTML=rows||"<tr><td colspan='6' class='mut'>"+(f=="a"?"Nenhum erro anotado ainda.":"Nada pendente. ")+"</td></tr>";
- $("ers").innerHTML='<div class="chip">Total: <b>'+S.errs.length+'</b></div><div class="chip">Pendentes: <b style="color:#0a84ff">'+pend+'</b></div><div class="chip">Revisados: <b>'+S.errs.filter(function(e){return e.r}).length+"</b></div>";
+ $("ers").innerHTML='<div class="chip">Total: <b>'+S.errs.length+'</b></div><div class="chip">Pendentes: <b style="color:#ff6a00">'+pend+'</b></div><div class="chip">Revisados: <b>'+S.errs.filter(function(e){return e.r}).length+"</b></div>";
  var mk=Object.keys(cm),mm=Math.max.apply(null,mk.map(function(k){return cm[k]}).concat([1]));
  $("erm").innerHTML=mk.length?mk.map(function(k){return'<div class="mut">'+esc(k)+': <b>'+cm[k]+'</b></div><div class="bar"><i class="bt" style="width:'+cm[k]/mm*100+'%"></i></div>'}).join(""):'<div class="mut">Anote seus erros para ver os motivos que mais pesam.</div>';
  // simulados
  var sc=S.sims.map(function(s){return simScore(s.b)});
- chart("c5",sc,{lab:S.sims.map(function(s){return s.d}),max:100,goal:C.cut,gc:"#8e8e93",col:"#0a84ff",fmt:function(v){return Math.round(v)},tip:S.sims.map(function(s,i){return fd(s.d)+": <b>"+nf(sc[i])+"</b>/100"})});
+ chart("c5",sc,{lab:S.sims.map(function(s){return s.d}),max:100,goal:C.cut,gc:"#8e8e93",col:"#ff6a00",fmt:function(v){return Math.round(v)},tip:S.sims.map(function(s,i){return fd(s.d)+": <b>"+nf(sc[i])+"</b>/100"})});
  var bst=sc.length?Math.max.apply(null,sc):0,avg=sc.length?sc.reduce(function(a,b){return a+b},0)/sc.length:0;
- $("sst").innerHTML='<div class="chip">Simulados: <b>'+sc.length+'</b></div><div class="chip">Melhor: <b>'+nf(bst)+'</b></div><div class="chip">Média: <b>'+nf(avg)+'</b></div><div class="chip">Corte alvo: <b style="color:#0a84ff">'+C.cut+"</b></div>";
+ $("sst").innerHTML='<div class="chip">Simulados: <b>'+sc.length+'</b></div><div class="chip">Melhor: <b>'+nf(bst)+'</b></div><div class="chip">Média: <b>'+nf(avg)+'</b></div><div class="chip">Corte alvo: <b style="color:#ff6a00">'+C.cut+"</b></div>";
  $("sl").innerHTML=S.sims.map(function(s,i){var n=0;for(var k in s.b)n+=s.b[k];return"<tr><td>"+fd(s.d)+"</td><td><b>"+nf(sc[i])+"</b></td><td>"+n+"/70</td><td>"+s.min+" min</td><td>"+(sc[i]>=C.cut?"✓":"✗")+"</td><td><button class='x' onclick='simDel("+i+")'>x</button></td></tr>"}).reverse().join("")||"<tr><td colspan='6' class='mut'>Nenhum simulado registrado ainda.</td></tr>";
  // histórico
  var ht="",s0=new Date(S.start+"T12:00:00");for(i=0;i<DAYS;i++){var d2=new Date(s0);d2.setDate(s0.getDate()+i);var k2=td(d2),q=M.D[k2]?M.D[k2].q:0;ht+='<i class="'+(q>=C.daily?"l3":q>=C.daily/2?"l2":q>0?"l1":"")+(k2==tdy?" t":"")+'" title="'+k2+": "+q+' questões" onclick="showTip(event,\''+fd(k2)+": "+q+' questões\')"></i>'}
