@@ -648,11 +648,11 @@ svg.ch:not(#c7) circle:not(.pulse){transform-box:fill-box;transform-origin:cente
   <div class="lgd"><span class="cvS"><i></i>Prioridade máxima</span><span class="cvA"><i></i>Alta</span><span class="cvB"><i></i>Média</span><span class="cvC"><i></i>Baixa (cobrir sem exagerar)</span></div></div>
  <div class="card full"><h3>Cobertura da semana</h3><div class="cov" id="wkcov"></div><div class="mut" style="margin-top:10px">As 18 matérias entram na semana. Fica laranja quando você lança questões dela.</div></div>
  <div class="card full why"><details><summary>Como esse plano foi montado</summary><ul>
-  <li><b>Cada dia tem 5 matérias:</b> 4 de TI e 1 de Exatas ou Português. Exatas ficam na frente por serem as mais difíceis. Domingo fecha a cobertura: 3 de TI (as de menor chance) e 2 de Humanas.</li>
+  <li><b>Cada dia tem 5 matérias:</b> 4 de TI e 1 de Exatas ou Português. Exatas ficam na frente por serem as mais difíceis. Domingo tem 6: Banco de Dados, Java, Engenharia de Software (Scrum, Git, CI/CD), Cibersegurança, Atualidades e Inglês.</li>
   <li><b>TI vale mais da metade da prova:</b> 35 questões de 1,5 ponto no último edital (2022).</li>
   <li><b>Banco de dados e programação dominam:</b> em 2021 caíram 12 de Banco de Dados e 11 de Programação; em 2023, 16 de Programação e 15 de Banco de Dados, com SQL e Java entre os assuntos mais frequentes. Por isso SQL aparece 5 dias na semana, Java, Python, Estrutura de Dados e NoSQL/Big Data 3 dias cada.</li>
   <li><b>Estrutura de dados oscila:</b> 10 questões em 2021 e 2 em 2023, então fica com 3 dias.</li>
-  <li><b>Fora da lista de TI do edital 2022:</b> Redes e Cloud, Segurança da Informação e Arquitetura/APIs. Ficam com 1 dia cada, no domingo. O Ansible (DevOps) aparece no edital.</li>
+  <li><b>Fora da lista de TI do edital 2022:</b> Redes e Cloud, Segurança da Informação e Arquitetura/APIs. Ficam com 1 dia cada: Arquitetura/APIs na sexta, Redes e Cloud no sábado e Segurança no domingo. O Ansible (DevOps) aparece no edital.</li>
   <li><b>Edital:</b> o BB confirmou em agosto que não haverá edital em 2026. Quando sair, confira o conteúdo.</li>
  </ul></details></div>
 </div><div class="grid" id="wk"></div></div>
@@ -697,22 +697,23 @@ WK=[
  {a:MB,w:"B"}]},
 {b:[
  {a:SQL,w:"S"},
- {a:JV,w:"S"},
  {a:ED,w:"A"},
  {a:IA,w:"A"},
- {a:PT,w:"A"}]},
+ {a:PT,w:"A"},
+ {a:AR,w:"C"}]},
 {b:[
  {a:MT,w:"S"},
- {a:SQL,w:"S"},
  {a:NB,w:"A"},
  {a:JS,w:"B"},
- {a:MB,w:"B"}]},
+ {a:MB,w:"B"},
+ {a:RC,w:"C"}]},
 {b:[
- {a:SG,w:"C"},
- {a:RC,w:"C"},
- {a:AR,w:"C"},
+ {a:SQL,w:"S"},
+ {a:JV,w:"S"},
+ {a:AG,w:"B"},
  {a:AT,w:"B"},
- {a:IN,w:"B"}]}],
+ {a:IN,w:"B"},
+ {a:SG,w:"C"}]}],
 OFF=0,RVsk={},RVshow=0,RK={S:4,A:3,B:2,C:1},DR={},SEL={};
 
 function mon(){var d=new Date(),x=(d.getDay()+6)%7;d.setDate(d.getDate()-x+7*OFF);return td(d)}
