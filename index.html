@@ -180,7 +180,7 @@ body.compact .card{padding:12px}body.compact .grid{gap:8px}
 input[type=range]{background:none;border:0;padding:0;height:28px;accent-color:var(--acc)}
 .opt{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.07);font-size:14px}
 </style></head><body><div class="wrap">
-<div class="top"><div class="logo">RANK <b>BB</b> · TI <em style="font-style:normal;font-size:11px;font-weight:700;background:var(--acc);border-radius:980px;padding:2px 8px;vertical-align:middle;-webkit-text-fill-color:#000">v10</em><small>Agente de Tecnologia · #1 é o topo</small></div>
+<div class="top"><div class="logo">RANK <b>BB</b> · TI <em style="font-style:normal;font-size:11px;font-weight:700;background:var(--acc);border-radius:980px;padding:2px 8px;vertical-align:middle;-webkit-text-fill-color:#000">v11</em><small>Agente de Tecnologia · #1 é o topo</small></div>
 <div class="tools"><span class="sync" id="sync"> Salvo neste aparelho</span><button class="rs" onclick="go(8)" title="Personalizar">Personalizar</button><button class="rs" onclick="resetAll()"> Resetar tudo</button></div></div>
 <nav id="nav"></nav>
 
@@ -571,4 +571,170 @@ render();
 (async function(){try{if(!window.claude)return;var u=await claude.use("user"),db=await claude.use("db");if(!u||!db)return;var id=await u.id();ref=db.collection("data/users/"+id).doc("bbti4");var sn=await ref.get(),ok=false;
  if(sn.exists){try{var d=normS(JSON.parse(sn.data().s));var n1=d.log.length+d.errs.length+d.sims.length,n2=S.log.length+S.errs.length+S.sims.length;if(n1>=n2){S=d;try{localStorage.setItem("bbti4",JSON.stringify(S))}catch(e){}render();ok=true}}catch(e){}}
  if(!ok)await ref.set({s:JSON.stringify(S)});$("sync").textContent=" Salvo na nuvem"}catch(e){ref=null}})();
-</script></body></html>
+</script>
+<!-- ===== PATCH: SEMANAL + REVISÃO (ANKI) + ANIMAÇÕES =====
+     COLE TUDO ISTO ANTES DE </body>, logo depois do último </script> ===== -->
+<style>
+/* ---- animações de entrada ---- */
+@keyframes fi{from{opacity:0}}
+@keyframes pop{from{transform:scale(0);opacity:0}}
+@keyframes grw{from{transform:scaleX(0)}}
+@keyframes cin{from{opacity:0;transform:translateY(16px)}}
+@keyframes fup{from{opacity:0;transform:translateY(10px) scale(.96)}}
+@keyframes rdr{from{transform:scale(.1);opacity:0}}
+.pg.on .card{animation:cin .6s cubic-bezier(.2,.8,.2,1) backwards}
+.pg.on .grid>.card:nth-child(2){animation-delay:.07s}.pg.on .grid>.card:nth-child(3){animation-delay:.14s}
+.pg.on .grid>.card:nth-child(4){animation-delay:.21s}.pg.on .grid>.card:nth-child(5){animation-delay:.28s}
+.pg.on .grid>.card:nth-child(n+6){animation-delay:.35s}
+.bar i,.rjb i,.jb i,.pj i,.hb i{transform-origin:left;animation:grw .9s cubic-bezier(.2,.8,.2,1) backwards}
+.pfk,.dbk,.perf div,.stats div,.jg div,.chip{animation:fup .6s cubic-bezier(.2,.8,.2,1) backwards}
+.pf4>:nth-child(2),.dbt>:nth-child(2){animation-delay:.08s}.pf4>:nth-child(3),.dbt>:nth-child(3){animation-delay:.16s}.pf4>:nth-child(4){animation-delay:.24s}
+svg.ch rect:not(.hit){animation:gr .8s cubic-bezier(.2,.8,.2,1) backwards}
+svg.ch path:not([pathLength]){animation:fi 1s .35s ease-out backwards}
+svg.ch:not(#c7) circle:not(.pulse){transform-box:fill-box;transform-origin:center;animation:pop .55s cubic-bezier(.3,1.6,.5,1) .9s backwards}
+#c7 circle{animation:fi 1s backwards}
+#radar polygon[stroke-width="2.5"]{transform-box:view-box;transform-origin:170px 140px;animation:rdr 1s cubic-bezier(.2,.8,.2,1) backwards}
+.dbsv path{animation:fi 1.1s .2s backwards}
+#nav button:nth-child(10),#nav button:nth-child(11){order:0}
+/* ---- semanal ---- */
+.wd.today{border-color:var(--acc);box-shadow:0 0 0 1px var(--acc)}
+.wdh{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:6px}.wdh h3{margin:0}
+.wi{background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:16px;padding:12px;margin-top:10px}.wi.ok2{border-color:rgb(var(--ar) / .55)}
+.wh b{display:block;font-size:14px;font-weight:600;line-height:1.3;margin-bottom:8px}
+.w3{display:grid;grid-template-columns:1fr 1fr 1.6fr;gap:6px}
+.wi input,.wi textarea{padding:9px;font-size:14px}
+.wb{display:flex;align-items:center;gap:10px;margin-top:8px;flex-wrap:wrap}.wb .rs{padding:6px 14px}
+.wi details{margin-top:8px}.wi summary{cursor:pointer;color:var(--acc2);font-size:13px;font-weight:600}
+.wi details input,.wi details textarea{margin-top:6px}.wi details .rs{margin-top:8px}
+/* ---- revisão ---- */
+.fc{margin-top:14px;border:1px solid var(--line);border-radius:22px;padding:24px;background:linear-gradient(160deg,rgb(var(--ar) / .14),rgba(255,255,255,.03));animation:fup .5s backwards}
+.fc>small{color:var(--mut);font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.ff{font-size:21px;font-weight:700;letter-spacing:-.02em;margin:10px 0 18px;line-height:1.35}
+.fb{border-top:1px dashed var(--line);padding:14px 0;font-size:16px;margin-bottom:8px}
+.rb{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}
+.rb button{border:0;border-radius:14px;padding:12px 4px;font-weight:700;font-size:14px;cursor:pointer;color:#000}
+.rb button small{display:block;font-weight:500;font-size:11px;opacity:.75;margin-top:2px}
+.rb .g0{background:#ff6b5e}.rb .g1{background:#ffb27a}.rb .g2{background:var(--acc)}.rb .g3{background:#30d158}
+.fc .x{margin-top:8px}
+</style>
+
+<div class="wrap">
+<div class="pg" id="p9"><div class="grid">
+ <div class="card full"><div class="pfh"><h3>Agenda semanal</h3><div class="tools"><button class="rs" onclick="wkNav(-1)">‹</button><button class="rs" onclick="wkNav(0)">Hoje</button><button class="rs" onclick="wkNav(1)">›</button></div></div><div class="chips" id="wks"></div></div>
+</div><div class="grid" id="wk"></div></div>
+
+<div class="pg" id="p10"><div class="grid">
+ <div class="card full"><h3>Revisão de erros (estilo Anki)</h3><div class="chips" id="rvs"></div><div id="rvc"></div>
+ <div class="mut" style="margin-top:12px">Errei volta no fim da fila de hoje · Difícil amanhã · Bom e Fácil seguem 1, 3, 7, 14 e 30 dias. Cards da Agenda e do Caderno de erros aparecem aqui.</div></div>
+</div></div>
+</div>
+
+<script>
+(function(){
+var WD=["Segunda","Terça","Quarta","Quinta","Sexta","Sábado","Domingo"],
+SQL="Banco de Dados SQL",PY="Python",ED="Estrutura de Dados e Algoritmos",NB="NoSQL e Big Data",MT="Matemática",PT="Língua Portuguesa",ES="Probabilidade e Estatística",JV="Java",IA="Ciência de Dados e IA",BK="Conhecimentos Bancários",
+/* >>> EDITE AQUI o cronograma: [texto exibido, matéria do site] <<< */
+WK=[
+[["Banco de Dados: Modelagem Conceitual, Relacional e Normalização",SQL],["Banco de Dados: SQL (ANSI-SPARC, consultas, junções, agregação)",SQL],["Python 3.9: sintaxe, estrutura básica e manipulação",PY],["Matemática: razões, proporções, regra de três e porcentagem",MT],["Português: interpretação de textos, tipos e gêneros",PT]],
+[["Algoritmos e Estrutura de Dados: busca, arrays, listas, pilhas e filas",ED],["Python para Analytics (Pandas, NumPy, SciPy, Matplotlib, Scikit-learn)",PY],["Estatística: tendência central e dispersão",ES],["NoSQL e SGBDs não relacionais",NB],["Atualidades: Open Finance, Pix, cripto e fintechs","Atualidades do Mercado Financeiro"]],
+[["Java SE 11 e EE 8: OO, classes, herança e interfaces",JV],["Ordenação (bolha, seleção, inserção) e árvores binárias",ED],["Matemática: lógica proposicional, tabelas-verdade e conjuntos",MT],["Ansible e TypeScript 4.0","JavaScript/TypeScript"],["Conhecimentos Bancários: SFN, órgãos normativos e supervisores",BK]],
+[["IA / Machine Learning: fundamentos, supervisionado/não supervisionado, PLN",IA],["Data Warehouse, BI e Data Mining",NB],["Estatística: Bayes, condicional, binomial e normal",ES],["Desenvolvimento Mobile: Android, iOS e multiplataforma","Desenvolvimento Mobile"],["Inglês: vocabulário e gramática de textos técnicos de TI","Língua Inglesa"]],
+[["Big Data: fundamentos, preparação e apresentação de dados",NB],["Java: servidores de aplicação e arquitetura JEE",JV],["Matemática: funções, PA e PG",MT],["Infra/TI: sistemas de decisão, produtividade e colaboração remota","Redes e Cloud"],["LGPD, Sigilo Bancário e Segurança Cibernética (CMN 4.893)",BK]],
+[["BD: otimização de consultas, índices e segurança",SQL],["Estatística: correlação linear, amostragem e inferência",ES],["Matemática: matrizes, determinantes e sistemas lineares",MT],["Estruturas avançadas e manipulação de arquivos",ED],["Português: sintaxe, concordância, regência e crase",PT]],
+[["Questões Cesgranrio: Banco de Dados e SQL",SQL],["Questões Cesgranrio: Python, Java e Estrutura de Dados",JV],["Questões: Matemática e Estatística",MT],["Revisão: erros da semana em TI, ML e IA",IA],["Revisão de Humanas: ética, código de conduta, bancários e português",BK]]],
+OFF=0,RVsk={},RVshow=0;
+
+function mon(){var d=new Date(),x=(d.getDay()+6)%7;d.setDate(d.getDate()-x+7*OFF);return td(d)}
+function key(i){return addDays(mon(),i)}
+function busy(sel){var a=document.activeElement;return a&&/INPUT|TEXTAREA/.test(a.tagName)&&a.closest&&a.closest(sel)}
+function dueN(){var t=td();return S.errs.filter(function(e){return!e.r&&(!e.nx||e.nx<=t)}).length}
+window.wkNav=function(n){OFF=n?OFF+n:0;wk(1)};
+
+function wk(f){
+ if(!f&&busy("#p9"))return;
+ var tdy=td(),m=mon(),h="",tq=0,tc=0,dias=0;
+ for(var i=0;i<7;i++){
+  var k=addDays(m,i),dq=0,dc=0;
+  S.log.forEach(function(e){if(e.d==k){dq+=e.q;dc+=e.c}});
+  tq+=dq;tc+=dc;if(dq)dias++;
+  var meta=Math.max(1,S.cfg.daily||60),pc=Math.min(100,dq/meta*100);
+  h+='<div class="card wd'+(k==tdy?" today":"")+'"><div class="wdh"><h3>'+WD[i]+(k==tdy?' <span class="pill">hoje</span>':'')+'</h3><span class="mut">'+fd(k)+' · '+dq+' questões</span></div><div class="bar"><i class="bt" style="width:'+pc+'%"></i></div>'
+  +WK[i].map(function(it,j){
+    var id=k+"_"+j,w=k+"|"+j,q=0,c=0,tp=[],er=0;
+    S.log.forEach(function(e){if(e.wk==w){q+=e.q;c+=e.c;if(e.t)tp.push(e.t)}});
+    S.errs.forEach(function(e){if(e.wk==w)er++});
+    return '<div class="wi'+(q?" ok2":"")+'"><div class="wh"><b>'+esc(it[0])+'</b></div>'
+    +'<div class="w3"><input id="wq'+id+'" type="number" min="0" placeholder="Questões"><input id="wc'+id+'" type="number" min="0" placeholder="Acertos"><input id="wt'+id+'" maxlength="40" placeholder="Assunto"></div>'
+    +'<div class="wb"><button class="rs" onclick="wkAdd('+i+','+j+')">Registrar</button><span class="mut">'+(q?q+' questões · '+pf(c/q*100)+(tp.length?" · "+esc(tp.join(", ")):""):"nada lançado")+'</span></div>'
+    +'<details><summary>Erros para revisar'+(er?" ("+er+")":"")+'</summary><input id="we'+id+'" maxlength="80" placeholder="O que você errou (frente do card)"><textarea id="wa'+id+'" rows="2" placeholder="Resposta certa / explicação (verso do card)"></textarea><button class="rs" onclick="wkErr('+i+','+j+')">Mandar para Revisão</button></details></div>'
+  }).join("")+'</div>'
+ }
+ $("wk").innerHTML=h;
+ $("wks").innerHTML='<div class="chip">Semana: <b>'+fd(m)+' – '+fd(addDays(m,6))+'</b></div><div class="chip">Questões: <b>'+tq+'</b></div><div class="chip">Acerto: <b>'+(tq?pf(tc/tq*100):"–")+'</b></div><div class="chip">Dias estudados: <b>'+dias+'/7</b></div><div class="chip">Cards para hoje: <b style="color:var(--acc)">'+dueN()+'</b> <button class="x" onclick="go(10)">Revisar</button></div>'
+}
+
+window.wkAdd=function(i,j){
+ var k=key(i),id=k+"_"+j;
+ if(k>td()){toast("Esse dia ainda não chegou");return}
+ var q=Math.max(0,Math.floor(+$("wq"+id).value||0)),c=Math.min(q,Math.max(0,Math.floor(+$("wc"+id).value||0)));
+ if(!q){toast("Informe o número de questões");return}
+ S.log.push({d:k,a:WK[i][j][1],q:q,c:c,h:0,t:$("wt"+id).value.trim(),df:"M",wk:k+"|"+j});
+ S.log.sort(function(a,b){return a.d<b.d?-1:a.d>b.d?1:0});
+ persist();document.activeElement.blur();render();
+ toast(q>c?"Lançado! Anote os "+(q-c)+" erros para a Revisão":"Lançado! Rank atualizado")
+};
+window.wkErr=function(i,j){
+ var k=key(i),id=k+"_"+j,t=$("we"+id).value.trim();
+ if(!t){toast("Descreva o erro");return}
+ S.errs.push({id:Date.now(),d:k,a:WK[i][j][1],t:t,w:"Semanal",r:0,st:0,nx:td(),b:$("wa"+id).value.trim(),wk:k+"|"+j});
+ persist();document.activeElement.blur();render();toast("Card criado na Revisão")
+};
+
+/* ---- revisão ---- */
+function due(){var t=td();return S.errs.map(function(e,i){return{e:e,i:i}}).filter(function(x){return!x.e.r&&(!x.e.nx||x.e.nx<=t)}).sort(function(a,b){return(RVsk[a.e.id]||0)-(RVsk[b.e.id]||0)})}
+function lab(e,g){if(g==0)return"agora";if(g==1)return"1 dia";var s=(e.st||0)+(g==3?2:1);return s>INT.length?"dominado":INT[s-1]+(INT[s-1]==1?" dia":" dias")}
+function rv(f){
+ if(!f&&busy("#p10"))return;
+ var d=due(),t=td(),tot=S.errs.length,dom=S.errs.filter(function(e){return e.r}).length,nw=S.errs.filter(function(e){return!e.r&&!e.st}).length,x=d[0],h;
+ $("rvs").innerHTML='<div class="chip">Para hoje: <b style="color:var(--acc)">'+d.length+'</b></div><div class="chip">Novos: <b>'+nw+'</b></div><div class="chip">Dominados: <b>'+dom+'</b></div><div class="chip">Total: <b>'+tot+'</b></div>';
+ if(!x){
+  var nx=S.errs.filter(function(e){return!e.r&&e.nx>t}).map(function(e){return e.nx}).sort()[0];
+  h='<div class="dbe">'+(tot?"Nada para revisar agora. ✓"+(nx?" Próxima revisão em "+fd(nx)+".":""):"Nenhum card ainda. Registre erros na Agenda semanal ou no Caderno de erros.")+'</div>'
+ }else{
+  var e=x.e;
+  h='<div class="fc"><small>'+esc(nm(e.a))+(e.w?" · "+esc(e.w):"")+'</small><div class="ff">'+esc(e.t)+'</div>'
+  +(RVshow
+   ?'<div class="fb">'+(e.b?esc(e.b).replace(/\n/g,"<br>"):'<span class="mut">Sem verso anotado. Revise o conceito e escreva abaixo.</span>')+'</div><textarea id="rvb" rows="2" placeholder="Editar verso do card">'+esc(e.b||"")+'</textarea><button class="x" onclick="rvSave('+x.i+')">Salvar verso</button>'
+    +'<div class="rb">'+[["Errei",0],["Difícil",1],["Bom",2],["Fácil",3]].map(function(r){return'<button class="g'+r[1]+'" onclick="rvRate('+x.i+','+r[1]+')">'+r[0]+'<small>'+lab(e,r[1])+'</small></button>'}).join("")+'</div>'
+   :'<button class="go" onclick="rvShow()">Mostrar resposta</button>')+'</div>'
+ }
+ $("rvc").innerHTML=h
+}
+window.rvShow=function(){RVshow=1;rv(1)};
+window.rvSave=function(i){S.errs[i].b=$("rvb").value.trim();persist();toast("Verso salvo");rv(1)};
+window.rvRate=function(i,g){
+ var e=S.errs[i],t=td();if(!e)return;
+ if(g==0){e.st=0;e.nx=t;RVsk[e.id]=Date.now()}
+ else if(g==1){e.nx=addDays(t,1)}
+ else{e.st=(e.st||0)+(g==3?2:1);if(e.st>INT.length)e.r=1;else e.nx=addDays(t,INT[e.st-1])}
+ RVshow=0;persist();render()
+};
+
+/* ---- animação escalonada dos gráficos ---- */
+function anim(){
+ document.querySelectorAll("svg.ch").forEach(function(s){
+  var i=0;s.querySelectorAll("rect:not(.hit)").forEach(function(r){r.style.animationDelay=(i++*40)+"ms"});
+  i=0;s.querySelectorAll("circle:not(.pulse)").forEach(function(c){if(s.id!="c7")c.style.animationDelay=(600+i++*35)+"ms"})
+ })
+}
+
+/* ---- conecta tudo ao render() do site ---- */
+var R0=render;
+render=function(){R0();wk();rv();anim()};
+TOT.push("Semanal","Revisão");
+$("nav").innerHTML=TOT.map(function(t,i){return'<button onclick="go('+i+')"'+(i==0?' class="on"':"")+'>'+t+'</button>'}).join("");
+render();
+})();
+</script>
+
+</body></html>
